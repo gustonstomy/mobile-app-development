@@ -1,3 +1,4 @@
+import 'package:ecomerce/boxes.dart';
 import 'package:ecomerce/buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                   child: BottunsClick(
                     name: "Buy Now",
                     tcolor: Colors.white,
-                    height: 40,
+                    height: 50,
                     width: 7,
                     fontSize: 13,
                     bcolor: Colors.amber,
@@ -139,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     "Category",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 25,
                         color: Colors.black),
                   ),
                 ),
@@ -153,22 +154,144 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: MediaQuery.sizeOf(context).height * .03,
           ),
-          ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 5,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: SizedBox(
+              height: 130,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  const BoxesWithName(
+                      name: "Hat",
+                      image: "assets/images/1.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Watch",
+                      image: "assets/images/2.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Red sheo",
+                      image: "assets/images/3.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Hat",
+                      image: "assets/images/4.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "L-Sleave",
+                      image: "assets/images/5.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Shirt red",
+                      image: "assets/images/6.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "L-Sleave",
+                      image: "assets/images/10.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Hat-ladies",
+                      image: "assets/images/8.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Watch",
+                      image: "assets/images/11.png",
+                      width: 75,
+                      height: 75),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  const BoxesWithName(
+                      name: "Shirt-Blue",
+                      image: "assets/images/7.png",
+                      width: 75,
+                      height: 75),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    "Flash Sale",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: Colors.black),
+                  ),
                 ),
-              );
-            },
-          )
+                const Text(
+                  "Closing in",
+                  style: TextStyle(fontSize: 14, color: Colors.grey),
+                ),
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width * 0.01,
+                ),
+                Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: Colors.grey)),
+                ),
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width * 0.01,
+                ),
+                Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: Colors.grey)),
+                ),
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width * 0.01,
+                ),
+                Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: Colors.grey)),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
